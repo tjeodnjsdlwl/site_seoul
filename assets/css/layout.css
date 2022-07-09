@@ -8,7 +8,7 @@
 }
 
 /* header */
-#header .group-gnb::after {
+#header .group-gnb .inner::after {
   content: '';
   display: block;
   clear: both;
@@ -75,7 +75,10 @@
   height: 120px;
   background: #fff;
 }
-#header .group-search::after {
+#header .group-search .inner {
+  height: 100%;
+}
+#header .group-search .inner::after {
   content: '';
   display: block;
   clear: both;

@@ -120,7 +120,8 @@ i[class*="ico-"] {
 .ico-btn,
 .sc-event .title-area .link-more,
 #header .group-gnb .logo a::before,
-#header .group-search .btn-search .ico-search {
+#header .group-search .btn-search .ico-search,
+.sc-news .title-area .link-all {
   background-image: url("../images/sp_bg.png");
   background-size: 300px 300px;
   background-repeat: no-repeat;
