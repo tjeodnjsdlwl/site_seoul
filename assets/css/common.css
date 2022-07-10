@@ -114,7 +114,8 @@ i[class*="ico-"] {
 .sc-sidebanner .btn-prev .ico-btn,
 .sc-sidebanner .btn-next .ico-btn,
 .sc-sidebanner .btn-play .ico-play,
-.sc-sidebanner .btn-pause .ico-pause {
+.sc-sidebanner .btn-pause .ico-pause,
+#footer .group-info .call-info::before {
   background-image: url("../images/sp_bg.png");
   background-size: 300px 300px;
   background-repeat: no-repeat;

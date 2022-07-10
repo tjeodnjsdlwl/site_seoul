@@ -835,3 +835,88 @@
 .sc-sidebanner .btn-play-wrap .btn.active {
   display: block;
 }
+
+/* sc-site */
+.sc-site .inner {
+  margin-bottom: 20px;
+}
+.sc-site .tab-list {
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+  background: #d0d0d0;
+}
+.sc-site .tab-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.sc-site .tab-list .tab-item {
+  float: left;
+  width: 33.33%;
+  line-height: 1.35em;
+}
+.sc-site .tab-list .btn-tab {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  background: #f7f7f7;
+  color: #333;
+  text-align: center;
+  box-sizing: border-box;
+}
+.sc-site .tab-item.active .btn-tab {
+  background: #e2e2e2;
+}
+.sc-site .tab-item + .tab-item .btn-tab {
+  border-left: 1px solid #d0d0d0;
+}
+.sc-site .tab-list .title {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  font-size: 14px;
+}
+.sc-site .tab-list .title::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  height: 7px;
+  width: 7px;
+  border-style: solid;
+  border-color: #373737;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(-135deg);
+  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: center center;
+}
+.sc-site .tab-item.active .title::after {
+  top: 4px;
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+.sc-site .tab-list .site-list-area {
+  position: absolute;
+  bottom: 47px;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px 20px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  box-sizing: border-box;
+  z-index: 10;
+  display: none;
+}
+.sc-site .tab-list .site-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.sc-site .tab-list .site-item {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+}
+.sc-site .tab-list .link-site {
+  color: #555;
+}

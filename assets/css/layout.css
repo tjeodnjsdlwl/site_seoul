@@ -211,3 +211,144 @@
 #header .weather-area .dust + .dust {
   margin-left: 5px;
 }
+
+/* footer */
+#footer .group-nav {
+  padding: 15px 0;
+}
+#footer .group-nav .inner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#footer .group-nav .corp-list {
+  float: left;
+  position: relative;
+  top: 7px;
+}
+#footer .group-nav .corp-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#footer .group-nav .corp-item {
+  position: relative;
+  float: left;
+  padding: 0 10px;
+}
+#footer .corp-item + .corp-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 14px;
+  margin-top: -6px;
+  background: #dcdcdc;
+}
+#footer .group-nav .link-corp {
+  font-size: 12px;
+  color: #636363;
+}
+#footer .group-nav .link-corp > strong {
+  color: #000;
+  font-weight: 700;
+}
+
+#footer .group-nav .sns-list {
+  float: right;
+  margin-right: -12px;
+}
+#footer .group-nav .sns-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#footer .group-nav .sns-item {
+  float: left;
+  margin-right: 12px;
+}
+#footer .sns-list .ico-sns {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icon_set_sns.png") no-repeat 0 0;
+}
+#footer .sns-item.facebook .ico-sns {
+  background-position: -25px 0;
+}
+#footer .sns-item.twitter .ico-sns {
+  background-position: -50px 0;
+}
+#footer .sns-item.instagram .ico-sns {
+  background-position: -75px 0;
+}
+#footer .sns-item.kakao .ico-sns {
+  background-position: -100px 0;
+}
+#footer .sns-item.youtube .ico-sns {
+  background-position: -125px 0;
+}
+#footer .sns-item.naverblog .ico-sns {
+  background-position: -150px 0;
+}
+#footer .sns-item:hover.facebook .ico-sns {
+  background-position: -25px -25px;
+}
+#footer .sns-item:hover.twitter .ico-sns {
+  background-position: -50px -25px;
+}
+#footer .sns-item:hover.instagram .ico-sns {
+  background-position: -75px -25px;
+}
+#footer .sns-item:hover.kakao .ico-sns {
+  background-position: -100px -25px;
+}
+#footer .sns-item:hover.youtube .ico-sns {
+  background-position: -125px -25px;
+}
+#footer .sns-item:hover.naverblog .ico-sns {
+  background-position: -150px -25px;
+}
+#footer .group-info .inner {
+  padding: 22px 0;
+  border-top: 1px solid #ccc;
+}
+#footer .group-info .inner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#footer .group-info .call-area {
+  float: left;
+}
+#footer .group-info .call-info::before {
+  content: '';
+  display: inline-block;
+  width: 108px;
+  height: 45px;
+  margin-right: 40px;
+  background-position: -180px 0;
+}
+#footer .group-info .address-area {
+  float: left;
+}
+#footer .group-info .address {
+  padding-bottom: 6px;
+  font-size: 12px;
+  color: #636363;
+}
+#footer .group-info .address a {
+  font-size: 11px;
+  font-weight: 400;
+}
+#footer .group-info .copyright {
+  clear: both;
+  font-size: 11px;
+}
+#footer .group-info .logo-area {
+  float: right;
+}
+#footer .logo-area .link-logo + .link-logo {
+  margin-left: 10px;
+}
