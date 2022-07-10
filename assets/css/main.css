@@ -757,3 +757,81 @@
 .sc-seoul .link-sns.kakao .ico-sns {
   background-position: -200px 0;
 }
+
+/* sc-sidebanner */
+.sc-sidebanner .inner {
+  position: relative;
+  padding: 50px 0 50px 0;
+  border-top: 2px solid #222;
+  box-sizing: border-box;
+}
+.sc-sidebanner .inner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.sc-sidebanner .sidebanner-slider {
+  overflow: hidden;
+}
+.sc-sidebanner .sidebanner-slider .slick-list {
+  margin-right: -43px;
+}
+.sc-sidebanner .sidebanner-slider .banner-slide {
+  margin-right: 43px;
+}
+.sc-sidebanner .sidebanner-slider .link-banner {
+  display: block;
+}
+.sc-sidebanner .sidebanner-slider .pagination {
+  float: right;
+  margin-top: 12px;
+  padding-right: 65px;
+}
+.sc-sidebanner .pagination li {
+  display:none;
+}
+.sc-sidebanner .pagination .slick-active {
+  display:block;
+}
+.sc-sidebanner .slide-control {
+  position: absolute;
+  right: 0;
+  bottom: 47px;
+}
+.sc-sidebanner .slide-control::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.sc-sidebanner .slide-control .btn {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+}
+.sc-sidebanner .slide-control i[class^="ico-"] {
+  width: 20px;
+  height: 20px;
+}
+.sc-sidebanner .btn-prev .ico-btn {
+  background-position: -45px -43px;
+}
+.sc-sidebanner .btn-next .ico-btn {
+  background-position: -86px -43px;
+}
+.sc-sidebanner .btn-play .ico-play {
+  background-position: -101px -43px;
+}
+.sc-sidebanner .btn-pause .ico-pause {
+  background-position: -65px -43px;
+}
+.sc-sidebanner .slide-control .btn-play-wrap {
+  float: left;
+}
+.sc-sidebanner .btn-play-wrap .btn {
+  margin: 0 -1px;
+  display: none;
+}
+.sc-sidebanner .btn-play-wrap .btn.active {
+  display: block;
+}

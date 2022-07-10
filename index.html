@@ -699,7 +699,72 @@
         </div>
       </section>
       <!-- sidebanner -->
-      <section class="sc-sidebanner"></section>
+      <section class="sc-sidebanner">
+        <h2 class="blind">광고영역</h2>
+        <div class="inner">
+          <div class="sidebanner-slider">
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img1.jpg" alt="안전하고 똑똑하게 여름나기 뜨거운 폭염 건강을 보호하세요" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img2.jpg" alt="6.25 비정규군 공로자 보상신청 안내 2021.10.14(목) ~ 2023.10.15(일)" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img3.jpg" alt="서울시 건설공사의 모든 것. 내 집앞 공사가 궁금하세요?" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img4.jpg" alt="찾아가는 여성 취업 상담버스 일자리 부르릉" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img5.jpg" alt="서울시의 모든 공모전을 한눈에 내손안에 서울 공모전 바로가기" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img6.jpg" alt="전사,순직 군인 2,048명의 유가족을 찾습니다!" />
+              </a>
+            </div>
+            <div class="banner-slide">
+              <a href="#" class="link-banner">
+                <img src="./assets/images/sidebanner_img7.jpg" alt="대한민국 국가상징 국민 통합과 자긍심의 상징" />
+              </a>
+            </div>
+          </div>
+          <div class="slide-control">
+            <a href="#" class="btn btn-prev">
+              <i class="ico-btn">
+                <span class="blind">이전</span>
+              </i>
+            </a>
+            <div class="btn-play-wrap">
+              <a href="#" class="btn btn-play">
+                <i class="ico-play">
+                  <span class="blind">재생</span>
+                </i>
+              </a>
+              <a href="#" class="btn btn-pause active">
+                <i class="ico-pause">
+                  <span class="blind">정지</span>
+                </i>
+              </a>
+            </div>
+            <a href="#" class="btn btn-next">
+              <i class="ico-btn">
+                <span class="blind">다음</span>
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer id="footer"></footer>
@@ -748,14 +813,39 @@ $(function(){
     //   $('.visual-slider').slick('slickPause');
     // });
 
+    $('.sidebanner-slider').slick({
+      slide: 'div',
+      autoplay : true,
+      infinite : true,
+      slidesToShow: 3,
+      prevArrow : $('.sc-sidebanner .btn-prev'),
+      nextArrow : $('.sc-sidebanner .btn-next'),
+      dots: true,
+      dotsClass: 'pagination',
+      customPaging: function (slider, i) {
+        return  (i + 1) + '/' + slider.slideCount;
+    }
+    });
+
 
     // sc-visual tab
     $('.sc-visual .group-slide .btn-tab').click(function(e){
       e.preventDefault();
       var data = $(this).data('target');
-      console.log(data);
       $(this).addClass('active').siblings().removeClass('active');
       $(`${data}`).addClass('visible').siblings().removeClass('visible');
+    });
+
+    // play button
+    $('.btn-play').click(function(e) {
+      e.preventDefault();
+      $(this).removeClass('active').siblings('.btn-pause').addClass('active');
+      $('.sidebanner-slider').slick('slickPlay');
+    });
+    $('.btn-pause').click(function(e) {
+      e.preventDefault();
+      $(this).removeClass('active').siblings('.btn-play').addClass('active');
+      $('.sidebanner-slider').slick('slickPause');
     });
 })
   </script>

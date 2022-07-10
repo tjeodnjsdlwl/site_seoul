@@ -1,5 +1,5 @@
 /* font - Nanum Gothic */
-@font-face {
+/* @font-face {
   font-family: 'Nanum Gothic';
   src: url('../fonts/NanumGothic-Regular.woff2');
   font-weight: 400;
@@ -13,7 +13,7 @@
   font-family: 'Nanum Gothic';
     src: url('../fonts/NanumGothic-ExtraBold.woff2');
   font-weight: 800;
-}
+} */
 
 body {
   min-width: 320px;
@@ -105,23 +105,16 @@ i[class*="ico-"] {
   height: 50px;
   background-position: -50px 0px;
 }
-.ico-btn {
-  width: 18px;
-  height: 18px;
-}
-.btn-prev .ico-btn {
-  background-position: -241px -285px;
-}
-.btn-next .ico-btn {
-  background-position: -256px -285px;
-}
 
 /* storage */
-.ico-btn,
 .sc-event .title-area .link-more,
 #header .group-gnb .logo a::before,
 #header .group-search .btn-search .ico-search,
-.sc-news .title-area .link-all {
+.sc-news .title-area .link-all,
+.sc-sidebanner .btn-prev .ico-btn,
+.sc-sidebanner .btn-next .ico-btn,
+.sc-sidebanner .btn-play .ico-play,
+.sc-sidebanner .btn-pause .ico-pause {
   background-image: url("../images/sp_bg.png");
   background-size: 300px 300px;
   background-repeat: no-repeat;
