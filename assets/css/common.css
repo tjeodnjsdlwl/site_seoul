@@ -83,37 +83,6 @@ select {
   background: url("../images/select_arrow.png") no-repeat no-repeat 96% center;
   background-size: 8px auto;
 }
-.board-list .board-item {
-  position: relative;
-  width: 100%;
-  padding: 6px 0 6px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.board-list .board-category {
-  float: left;
-  margin: 0 9px 0 0;
-  font-size: 15px;
-}
-.board-list .board-category.environment {
-  color: #599100;
-}
-.board-list .board-category.economy {
-  color: #069363;
-}
-.board-list .board-category.culture {
-  color: #9b64d3;
-}
-.board-list .board-category.traffic {
-  color: #337ee2;
-}
-.board-list .title {
-  overflow: hidden;
-  font-size: 15px;
-  color: #222;
-  line-height: 1.35em;
-}
 
 /* icon */
 i[class^="ico-"],

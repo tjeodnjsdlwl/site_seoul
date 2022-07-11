@@ -13,7 +13,9 @@
   width: 770px;
 }
 .sc-visual .group-slide .tab-area {
+  position: relative;
   float: left;  
+  z-index: 1;
 }
 .sc-visual .tab-area .btn-tab {
   position: relative;
@@ -59,14 +61,18 @@
   background-position: -50px 0px;
 }
 .sc-visual .slider-area {
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 690px;
+  height: 350px;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
-.sc-visual .visual-slider-wrapper.visible {
-  display: block;
-}
-.sc-visual .visual-slider-wrapper {
-  position: relative;
-  display: none;
+.sc-visual .slider-area.visible {
+  opacity: 1;
+  visibility: visible;
 }
 .sc-visual .visual-slide {
   position: relative;
@@ -78,14 +84,14 @@
   width: 100%;
   height: 40px;
   line-height: 40px;
-  padding-left: 10px;
-  padding-right: 122px;
   background-color: rgba(0,0,0,.7);
 }
 .sc-visual .slide-info .title {
   display: inline-block;
-  max-width: 400px;
+  width: 100%;
   color: #fff;
+  padding-left: 10px;
+  padding-right: 122px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -393,6 +399,44 @@
   width: 22px;
   height: 20px;
   background-position: -1px -1px;
+}
+.sc-event .board-list .board-item,
+.sc-program .board-list .board-item {
+  position: relative;
+  width: 100%;
+  padding: 6px 0 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sc-event .board-list .board-category,
+.sc-program .board-list .board-category {
+  float: left;
+  margin: 0 9px 0 0;
+  font-size: 15px;
+}
+.sc-event .board-category.environment,
+.sc-program .board-category.environment {
+  color: #599100;
+}
+.sc-event .board-category.economy,
+.sc-program .board-category.economy {
+  color: #069363;
+}
+.sc-event .board-category.culture,
+.sc-program .board-category.culture {
+  color: #9b64d3;
+}
+.sc-event .board-category.traffic,
+.sc-program .board-category.traffic {
+  color: #337ee2;
+}
+.sc-event .board-list .title,
+.sc-program .board-list .title {
+  overflow: hidden;
+  font-size: 15px;
+  color: #222;
+  line-height: 1.35em;
 }
 /* .sc-favorservice */
 .sc-favorservice .title-area {
@@ -915,14 +959,13 @@
 #btn-top {
   position: fixed;
   bottom: -100px;
-  bottom: 0;
   left: 50%;
   width: 34px;
   height: 34px;
   margin-left: 600px;
   opacity: 0;
   transition: 1s;
-  z-index: 100;
+  z-index: 9;
 }
 #btn-top::before {
   content: '';
@@ -932,6 +975,6 @@
   background: url("../images/btn_top.png") no-repeat center/cover;
 }
 #btn-top.visible {
-  opacity: 1;
   bottom: 98px;
+  opacity: 1;
 }
