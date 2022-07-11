@@ -128,12 +128,17 @@
   bottom: 0;
   padding: 0;
 }
+#header .btn-search .ico-search {
+  width: 36px;
+  height: 36px;
+  background-position: -32px -97px;
+}
 #header .group-search .btn-keyboard {
   position: absolute;
   top: 12px;
   right: 42px;
 }
-#header .group-search .btn-keyboard .ico-keyboard {
+#header .btn-keyboard .ico-keyboard {
   width: 29px;
   height: 16px;
   background: url("../images/ico_keyboard.png") no-repeat center;
