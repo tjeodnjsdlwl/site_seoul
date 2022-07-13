@@ -1,5 +1,5 @@
-/* font - Nanum Gothic */
-/* @font-face {
+
+ @font-face {
   font-family: 'Nanum Gothic';
   src: url('../fonts/NanumGothic-Regular.woff2');
   font-weight: 400;
@@ -9,14 +9,10 @@
   src: url('../fonts/NanumGothic-Bold.woff2');
   font-weight: 700;
 }
-@font-face {
-  font-family: 'Nanum Gothic';
-    src: url('../fonts/NanumGothic-ExtraBold.woff2');
-  font-weight: 800;
-} */
+
 
 body {
-  min-width: 320px;
+  min-width: 1200px;
   font-family: 'Nanum Gothic';
   font-size: 14px;
   font-weight: 400;
@@ -47,12 +43,13 @@ body {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
-.inner {
+
+.common-inner {
   position: relative;
   width: 1152px;
   margin: 0 auto;
-  min-width: 1152px;
 }
+
 .sc-title {
   font-size: 24px;
   font-weight: 700;

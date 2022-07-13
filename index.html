@@ -15,109 +15,113 @@
 </head>
 <body>
 
+  <input type="text" id="teee">
+
   <div id="wrapper">
     <a href="#main" id="skip-nav">본문 바로가기</a>
     <!-- HEADER -->
     <header id="header">
-      <div class="group-gnb">
-        <div class="inner">
-          <div class="logo-area">
-            <h1 class="logo">
-              <a href="#">
-                <span class="blind">서울특별시</span>
-              </a>
-            </h1>
-          </div>
-          <nav id="gnb" class="gnb-area">
-            <ul class="gnb-list">
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">서울소식</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">시민참여</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">분야별정보</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">서울소개</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">부서안내</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">정보공개</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-gnb">응답소</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="service-area">
-            <a href="#" class="link-service">로그인</a>
-            <a href="#" class="link-service">나의서울</a>
-            <a href="#" class="link-service">전자우편</a>
+      <div class="common-inner">
+        <div class="group-gnb">
+          <div class="inner">
+            <div class="logo-area">
+              <h1 class="logo">
+                <a href="#">
+                  <span class="blind">서울특별시</span>
+                </a>
+              </h1>
+            </div>
+            <nav id="gnb" class="gnb-area">
+              <ul class="gnb-list">
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">서울소식</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">시민참여</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">분야별정보</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">서울소개</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">부서안내</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">정보공개</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-gnb">응답소</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="service-area">
+              <a href="#" class="link-service">로그인</a>
+              <a href="#" class="link-service">나의서울</a>
+              <a href="#" class="link-service">전자우편</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="group-search">
-        <div class="inner">
-          <div class="logo-area">
-            <h2 class="logo">
-              <a href="#">
-                <span class="blind">I SEOUL U 너와 나의 서울</span>
+        <div class="group-search">
+          <div class="inner">
+            <div class="logo-area">
+              <h2 class="logo">
+                <a href="#">
+                  <span class="blind">I SEOUL U 너와 나의 서울</span>
+                </a>
+              </h2>
+            </div>
+            <div class="search-area">
+              <form method="get" action="">
+                <fieldset>
+                  <legend class="blind">검색</legend>
+                  <div class="search">
+                    <input type="text" class="input-search" placeholder="검색어를 입력해 주세요" />
+                    <button class="btn-search">
+                      <i class="ico-search">
+                        <span class="blind">검색</span>
+                      </i>
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+              <a href="#" class="btn-keyboard">
+                <i class="ico-keyboard">
+                  <span class="blind">키보드 입력기</span>
+                </i>
               </a>
-            </h2>
-          </div>
-          <div class="search-area">
-            <form method="get" action="">
-              <fieldset>
-                <legend class="blind">검색</legend>
-                <div class="search">
-                  <input type="text" class="input-search" placeholder="검색어를 입력해 주세요" />
-                  <button class="btn-search">
-                    <i class="ico-search">
-                      <span class="blind">검색</span>
-                    </i>
-                  </button>
-                </div>
-              </fieldset>
-            </form>
-            <a href="#" class="btn-keyboard">
-              <i class="ico-keyboard">
-                <span class="blind">키보드 입력기</span>
+            </div>
+            <div class="language-area">
+              <select class="select-lang" id="selectLang">
+                <option value="https://www.naver.com/">ENGLISH</option>
+                <option value="https://www.youtube.com/?gl=KR&hl=ko">日本語</option>
+                <option value="https://www.naver.com/">简体中文</option>
+                <option value="https://www.youtube.com/?gl=KR&hl=ko">繁体中文</option>
+                <option value="https://www.naver.com/">WorldWide</option>
+              </select>
+              <!-- btn-lang -->
+              <a href="#" class="link-go">GO</a>
+            </div>
+            <a href="#" class="weather-area">
+              <i class="ico-weather">
+                <!-- img alt="" -->
+                <span class="blind">흐림</span>
               </i>
+        
+              <div class="weather-info">
+                <!-- a태그로 교체 -->
+                <div class="info-box">
+                  <span class="degree">24.5℃</span>
+                  <span class="condition">흐림</span>
+                </div>
+                <div class="info-box">
+                  <span class="dust">미세먼지(좋음)</span>
+                  <span class="dust">초미세먼지(보통)</span>
+                </div>
+              </div>
             </a>
           </div>
-          <div class="language-area">
-            <select class="select-lang">
-              <option value="https://www.naver.com/">ENGLISH</option>
-              <option value="https://www.youtube.com/?gl=KR&hl=ko">日本語</option>
-              <option value="https://www.naver.com/">简体中文</option>
-              <option value="https://www.youtube.com/?gl=KR&hl=ko">繁体中文</option>
-              <option value="https://www.naver.com/">WorldWide</option>
-            </select>
-            <!-- btn-lang -->
-            <a href="#" class="link-go">GO</a>
-          </div>
-          <a href="#" class="weather-area">
-            <i class="ico-weather">
-              <!-- img alt="" -->
-              <span class="blind">흐림</span>
-            </i>
-            
-            <div class="weather-info">
-              <!-- a태그로 교체 -->
-              <div class="info-box">
-                <span class="degree">24.5℃</span>
-                <span class="condition">흐림</span>
-              </div>
-              <div class="info-box">
-                <span class="dust">미세먼지(좋음)</span>
-                <span class="dust">초미세먼지(보통)</span>
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </header>
@@ -125,6 +129,72 @@
     <main id="main">
       <!-- visual -->
       <!-- inner -->
+      <style>
+        .inner1{
+          height: 350px;
+        }
+        .inner1::after{content: '';clear: both;display: block;}
+        .sc-visual{
+          position: relative;
+          float: left;
+          width: 770px;
+          background: #ccc;
+          height: 100%;
+        }
+        /* common */
+        .sc-visual .slide-cont{
+          position: absolute;
+          right: 0;
+          width: 690px;
+          background: #888;
+          height: 100%;
+        }
+        .sc-visual .slide-cont .title{
+          position: absolute;
+          top: 0;left: -80px;
+          width: 80px;
+          height: 50%;
+          background: #999;
+        }
+        .sc-visual .slide-cont .visual-slider{}
+        .sc-visual .slide-cont .slick-slide{
+          height: 350px;
+        }
+        .sc-visual .slide-cont .control-box{
+          position: absolute;
+          bottom: 0;right: 0;
+          display: flex;
+        }
+        .sc-visual .slide-cont .control-box > *{
+          background: #ccc;
+          padding: 10px;
+        }
+        /* 개인 */
+        .sc-visual .slide-cont.slide1{}
+        .sc-visual .slide-cont.slide2{}
+        .sc-visual .slide-cont.slide2 .title{top: 50%;}
+        /* active */
+        .sc-visual .slide-cont.active{
+          z-index: 3;
+        }
+        .sc-visual .slide-cont.active .title{
+          background: #00f;
+          color: #fff;
+        }
+
+
+
+
+
+
+
+        .inner1 .column-right{
+          float: right;
+          width: 350px;
+          background: #ccc;
+        }
+      </style>
+
       <div class="common-inner">
         <div class="inner1">
           <section class="sc-visual">
@@ -133,19 +203,62 @@
                 <a href="">쥬요뉴스</a>
               </h3>
               <div class="slide">
-                <div class="visual-slider1">
-                  1111111
+                <div class="visual-slider">
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb1.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb2.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb3.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb4.jpg" alt="">
+                  </div>
                 </div>
+                <!-- @ -->
+                <div class="control-box">
+                    <div class="pagination"></div>
+                    <a href="" class="btn-nav prev">이전</a>
+                    <a href="" class="btn-control pause">
+                      자동재생 정지
+                    </a>
+                    <a href="" class="btn-nav next">다음</a>
+
+                </div>
+
               </div>
             </div>
-            <div class="slide-cont slide2">
+            <div class="slide-cont slide2 ">
               <h3 class="title">
-                <a href="">쥬요뉴스</a>
+                <a href="">시민참여</a>
               </h3>
               <div class="slide">
-                <div class="visual-slider1">
-                  22222
+                <div class="visual-slider">
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb4.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb3.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb2.jpg" alt="">
+                  </div>
+                  <div class="slick-slide">
+                    <img src="./assets/images/visual1_thumb1.jpg" alt="">
+                  </div>
                 </div>
+                <div class="control-box">
+                  <div class="pagination"></div>
+                  <a href="" class="btn-nav prev">이전</a>
+                  <a href="" class="btn-control pause">
+                    자동재생 정지
+                  </a>
+                  <a href="" class="btn-nav next">다음</a>
+
+              </div>
+
               </div>
             </div>
           </section>
@@ -1049,6 +1162,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+  <script src="./assets/js/custom.js"></script>
 </body>
 </html>

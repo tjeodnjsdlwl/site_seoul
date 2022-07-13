@@ -1,29 +1,119 @@
 $(function(){
+
+    $('#teee').keydown(function(){
+        console.log($(this).val());
+    })
+
+    $('.link-go').click(function(e){
+        e.preventDefault();
+        const link = $('#selectLang').val();
+        window.open(link);
+    })
+
+    const slide1 = $('.slide1 .visual-slider');
+    const slide2 = $('.slide2 .visual-slider');
+
+    $('.sc-visual .title').click(function(){
+        $(this).parent().addClass('active').siblings().removeClass('active');
+
+        if($(this).parent().hasClass('slide1')){
+            // 주요뉴스
+            
+            slide2.slick('slickPause') //2번정지
+
+            if($('.slide1 .btn-control').hasClass('pause')){
+                //자동재생
+                slide1.slick('slickPlay') 
+            }else{
+                //일시정지
+                slide1.slick('slickPause') 
+            }
+            
+        }else{
+            // 시민참여
+            slide1.slick('slickPause') //1번지
+
+            if($('.slide2 .btn-control').hasClass('pause')){
+                //자동재생
+                slide2.slick('slickPlay') 
+            }else{
+                //일시정지
+                slide2.slick('slickPause') 
+            }
+        }
+    })
+
+    
+
+
+
+
+
   // slick slide
-    $('#slider1 .visual-slider').slick({
+  slide1.slick({
       slide: 'div',
       autoplay : true,
       infinite : true,
-      prevArrow : $('#slider1 .btn-prev'),
-      nextArrow : $('#slider1 .btn-next'),
+      prevArrow : $('.slide1 .prev'),
+      nextArrow : $('.slide1 .next'),
       dots: true,
       dotsClass: 'pagination',
       customPaging: function (slider, i) {
-        return  (i + 1) + '/' + slider.slideCount;
-    }
+            return  (i + 1) + '/' + slider.slideCount;
+        }
     });
-    $('#slider2 .visual-slider').slick({
+
+    slide2.slick({
       slide: 'div',
       autoplay : true,
       infinite : true,
-      prevArrow : $('#slider2 .btn-prev'),
-      nextArrow : $('#slider2 .btn-next'),
+      prevArrow : $('.slide2 .prev'),
+      nextArrow : $('.slide2 .next'),
       dots: true,
       dotsClass: 'pagination',
       customPaging: function (slider, i) {
-        return  (i + 1) + '/' + slider.slideCount;
-    }
+            return  (i + 1) + '/' + slider.slideCount;
+        }
     });
+    slide2.slick('slickPause')
+
+
+    $('.slide1 .btn-control').click(function(e){
+        e.preventDefault();
+        if($(this).hasClass('pause')){
+            // 자동재생중 상태를 클릭하는경우
+            $(this).text('자동재생 적용').removeClass('pause')
+            slide1.slick('slickPause')
+        }else{
+            // 정지 상태를 클릭하는경우
+            $(this).text('자동재생 정지').addClass('pause')
+            slide1.slick('slickPlay')
+        }
+    })
+    $('.slide2 .btn-control').click(function(e){
+        e.preventDefault();
+        if($(this).hasClass('pause')){
+            // 자동재생중 상태를 클릭하는경우
+            $(this).text('자동재생 적용').removeClass('pause')
+            slide2.slick('slickPause')
+        }else{
+            // 정지 상태를 클릭하는경우
+            $(this).text('자동재생 정지').addClass('pause')
+            slide2.slick('slickPlay')
+        }
+    })
+
+
+
+
+
+    /**
+     * 접근성 & UX 개선 (키보드 사용할때만 포커스 나오게)
+     *
+     * @version 1.0.0
+     * @since 2022-01-16
+     * @author 이사님 (Nico)
+     */
 
     $('.sidebanner-slider').slick({
       slide: 'div',
@@ -40,31 +130,21 @@ $(function(){
     });
 
 
-    // sc-visual tab
-    $('.sc-visual .group-slide .btn-tab').click(function(e){
-      e.preventDefault();
-      const data = $(this).data('target');
-      $(this).addClass('active').siblings().removeClass('active');
-      $(`${data}`).addClass('visible').siblings().removeClass('visible');
-    });
 
-    // play button
-    $('.btn-play').click(function(e) {
-      e.preventDefault();
-      $(this).removeClass('active').siblings('.btn-pause').addClass('active');
-      $('.visual-slider, .sidebanner-slider').slick('slickPlay');
-    });
-    $('.btn-pause').click(function(e) {
-      e.preventDefault();
-      $(this).removeClass('active').siblings('.btn-play').addClass('active');
-      $('.visual-slider, .sidebanner-slider').slick('slickPause');
-    });
+
+
+
+
+
+    
 
     // sc-site button tab
     $('.sc-site .btn-tab').click(function(e){
       e.preventDefault();
       const sub = $(this).siblings('.site-list-area');
       $(this).parent().toggleClass('active').siblings().removeClass('active');
+
+
       if (sub.css('display') === 'none') {
         $('.site-list-area').stop().slideUp();
         $(sub).stop().slideToggle();
@@ -72,6 +152,25 @@ $(function(){
         $(sub).stop().slideUp();
       }
     });
+
+
+    $('.site-list-area .site-item:first-child a').keydown(function(e){
+        if(e.keyCode === 9 && e.shiftKey){
+            $('.site-list-area').stop().slideUp();
+        }
+    })
+
+    $('.site-list-area .site-item:last-child a').keydown(function(e){
+        if(e.keyCode === 9 && !e.shiftKey){
+            $('.site-list-area').stop().slideUp();
+        }
+
+    })
+
+
+
+
+
 
     // btn-top
     let lastScroll = 0;
